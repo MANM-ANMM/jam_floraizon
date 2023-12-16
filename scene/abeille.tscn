@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://xh3h0ti0k0l3"]
+[gd_scene load_steps=13 format=3 uid="uid://xh3h0ti0k0l3"]
 
 [ext_resource type="Script" path="res://script/abeille.gd" id="1_adl2g"]
 [ext_resource type="PackedScene" uid="uid://b7d0v4ir5ldr" path="res://scene/fleurs/liseron.tscn" id="2_0mhsu"]
@@ -7,6 +7,30 @@
 [ext_resource type="Texture2D" uid="uid://dulgwc6maxb5p" path="res://sprite/icon.svg" id="2_s8drh"]
 [ext_resource type="PackedScene" uid="uid://bpkihfe3y2osp" path="res://scene/fleurs/tournesol.tscn" id="2_w8fps"]
 [ext_resource type="PackedScene" uid="uid://cmfpjfy80bikb" path="res://scene/fleurs/graine.tscn" id="3_qdxtu"]
+[ext_resource type="Texture2D" uid="uid://cn5ulnnvqa82s" path="res://sprite/Abeille/Abeille1.png" id="8_sneww"]
+[ext_resource type="Texture2D" uid="uid://dvagee5k3u0i0" path="res://sprite/Abeille/Abeille2.png" id="9_d033c"]
+[ext_resource type="Texture2D" uid="uid://8jpghb5t4pxu" path="res://sprite/Abeille/Abeille3.png" id="10_fe7pb"]
+[ext_resource type="Texture2D" uid="uid://brpvboppufvd2" path="res://sprite/Abeille/Abeille4.png" id="11_qi1ri"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cml54"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_sneww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d033c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fe7pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qi1ri")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
 
 [node name="Abeille" type="Node2D"]
 script = ExtResource("1_adl2g")
@@ -19,3 +43,8 @@ scene_graine = ExtResource("3_qdxtu")
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_s8drh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cml54")
+animation = &"fly"
+speed_scale = 2.0
