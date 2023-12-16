@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://xh3h0ti0k0l3"]
+[gd_scene load_steps=6 format=3 uid="uid://xh3h0ti0k0l3"]
 
 [ext_resource type="Script" path="res://script/abeille.gd" id="1_adl2g"]
+[ext_resource type="PackedScene" uid="uid://berdycrk1rd71" path="res://scene/fleurs/bourgeon.tscn" id="2_77dsr"]
 [ext_resource type="Texture2D" uid="uid://dulgwc6maxb5p" path="res://sprite/icon.svg" id="2_s8drh"]
 [ext_resource type="PackedScene" uid="uid://bpkihfe3y2osp" path="res://scene/fleurs/tournesol.tscn" id="2_w8fps"]
 [ext_resource type="PackedScene" uid="uid://cmfpjfy80bikb" path="res://scene/fleurs/graine.tscn" id="3_qdxtu"]
 
 [node name="Abeille" type="Node2D"]
 script = ExtResource("1_adl2g")
+scene_bourgeon = ExtResource("2_77dsr")
 scene_tournesol = ExtResource("2_w8fps")
 scene_graine = ExtResource("3_qdxtu")
 
