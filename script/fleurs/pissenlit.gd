@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -600.0
 var masse := 0.41
 const masse_player := 1.0
 const masse_coupe := -0.4
@@ -31,6 +31,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		if velocity.y>0:
 			velocity.y += gravity * delta * masse * 0.02
+			$Node2D.rotation = (0.04*sin(Time.get_ticks_usec()/112000.0)*sin(Time.get_ticks_usec()/500000.0))
 		else:
 			velocity.y += gravity * delta * masse * 1.2
 	
