@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpkihfe3y2osp"]
 
-[ext_resource type="Texture2D" uid="uid://dulgwc6maxb5p" path="res://sprite/icon.svg" id="1_86jgn"]
 [ext_resource type="Script" path="res://script/fleurs/tournesol.gd" id="1_avult"]
+[ext_resource type="Texture2D" uid="uid://dw281qjfmr7lx" path="res://sprite/fleurs/pacerette.png" id="2_ra46t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dwb5"]
-size = Vector2(100, 10)
+size = Vector2(317, 30)
 
 [node name="tournesol" type="StaticBody2D"]
 collision_layer = 18
@@ -12,15 +12,9 @@ collision_mask = 0
 script = ExtResource("1_avult")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -64)
+position = Vector2(2.5, -287)
 shape = SubResource("RectangleShape2D_4dwb5")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(0, -32)
-scale = Vector2(0.1, 0.5)
-texture = ExtResource("1_86jgn")
-
-[node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(0, -64)
-scale = Vector2(0.8, 0.1)
-texture = ExtResource("1_86jgn")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, -156)
+texture = ExtResource("2_ra46t")

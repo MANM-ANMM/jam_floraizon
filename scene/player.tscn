@@ -73,4 +73,3 @@ shape = SubResource("CapsuleShape2D_80vdj")
 sprite_frames = SubResource("SpriteFrames_oma6h")
 animation = &"jump"
 frame = 2
-frame_progress = 0.519406
