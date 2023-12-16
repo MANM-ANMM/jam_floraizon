@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx84cgh7b7a34"]
+[gd_scene load_steps=6 format=3 uid="uid://dx84cgh7b7a34"]
 
 [ext_resource type="PackedScene" uid="uid://ba3rnbnkly0kt" path="res://scene/player.tscn" id="1_kh3ve"]
 [ext_resource type="PackedScene" uid="uid://bgpw00c2jb5w6" path="res://scene/mur.tscn" id="2_7g70i"]
 [ext_resource type="PackedScene" uid="uid://xh3h0ti0k0l3" path="res://scene/abeille.tscn" id="3_fa8wq"]
 [ext_resource type="AudioStream" uid="uid://kinhcl702rqq" path="res://musique/Jam_Floraison.mp3" id="5_0oimc"]
-[ext_resource type="PackedScene" uid="uid://b8bjyfpa1lop6" path="res://scene/tile_map.tscn" id="5_ck35u"]
+[ext_resource type="PackedScene" path="res://scene/tile_map.tscn" id="5_ck35u"]
 
 [node name="main" type="Node2D"]
 
