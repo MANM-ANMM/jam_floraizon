@@ -10,8 +10,8 @@ func _physics_process(delta):
 	position.y += delta * speed
 
 func _on_body_entered(body):
+	if is_queued_for_deletion(): return
 	queue_free()
-	$CollisionShape2D.disabled = true
 	if not(body.collision_layer & 1):
 		return
 	
