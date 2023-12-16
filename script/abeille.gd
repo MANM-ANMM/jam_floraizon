@@ -19,6 +19,9 @@ const nombre_fleurs_max:=3
 	"tournesol_abeille": {"scene" : scene_tournesol, "utilise" : null},
 }
 
+func _ready():
+	$AnimatedSprite2D.play("fly")
+
 func _physics_process(delta):
 	var dir := Input.get_vector("move_left_abeille", "move_right_abeille", "move_up_abeille", "move_down_abeille")
 	
