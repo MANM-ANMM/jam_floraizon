@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpkihfe3y2osp"]
+[gd_scene load_steps=4 format=3 uid="uid://bpkihfe3y2osp"]
 
 [ext_resource type="Texture2D" uid="uid://dulgwc6maxb5p" path="res://sprite/icon.svg" id="1_86jgn"]
+[ext_resource type="Script" path="res://script/fleurs/tournesol.gd" id="1_avult"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dwb5"]
 size = Vector2(100, 10)
@@ -8,6 +9,7 @@ size = Vector2(100, 10)
 [node name="tournesol" type="StaticBody2D"]
 collision_layer = 18
 collision_mask = 0
+script = ExtResource("1_avult")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -64)

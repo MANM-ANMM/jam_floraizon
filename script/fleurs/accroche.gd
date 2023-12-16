@@ -30,6 +30,7 @@ func accrocher(p):
 	player_accroche.emit(player)
 
 func decrocher():
+	if not accroche: return
 	remove_child(player)
 	player.global_position = offset + global_position
 	player_parent.add_child(player)

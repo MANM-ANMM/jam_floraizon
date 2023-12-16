@@ -35,4 +35,19 @@ position = Vector2(892, 636)
 [node name="Mur6" parent="." instance=ExtResource("2_7g70i")]
 position = Vector2(1089, 636)
 
+[node name="Mur10" parent="." instance=ExtResource("2_7g70i")]
+position = Vector2(995, 555)
+
+[node name="Mur11" parent="." instance=ExtResource("2_7g70i")]
+position = Vector2(1197, 424)
+
+[node name="Mur7" parent="." instance=ExtResource("2_7g70i")]
+position = Vector2(481, 309)
+
+[node name="Mur8" parent="." instance=ExtResource("2_7g70i")]
+position = Vector2(680, 309)
+
+[node name="Mur9" parent="." instance=ExtResource("2_7g70i")]
+position = Vector2(877, 309)
+
 [node name="Fleurs" type="Node2D" parent="."]
