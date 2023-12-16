@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3clkm2cdc6pm"]
+[gd_scene load_steps=7 format=3 uid="uid://d3clkm2cdc6pm"]
 
 [ext_resource type="PackedScene" uid="uid://nhhvjrd0pr07" path="res://scene/fleurs/accroche.tscn" id="1_1k02s"]
 [ext_resource type="Script" path="res://script/fleurs/pissenlit.gd" id="1_k60i8"]
@@ -11,10 +11,7 @@ radius = 87.0
 size = Vector2(15, 205)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gb4tc"]
-size = Vector2(12, 211)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f50ja"]
-size = Vector2(30, 10)
+size = Vector2(20, 211)
 
 [node name="Pissenlit" type="CharacterBody2D"]
 collision_layer = 2
@@ -35,10 +32,6 @@ debug_color = Color(0.435294, 0.596078, 0.196078, 0.419608)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(0, -105.5)
 shape = SubResource("RectangleShape2D_gb4tc")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
-shape = SubResource("RectangleShape2D_f50ja")
 
 [node name="Node2D" type="Node2D" parent="."]
 

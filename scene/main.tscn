@@ -1,7 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dx84cgh7b7a34"]
 
 [ext_resource type="PackedScene" uid="uid://ba3rnbnkly0kt" path="res://scene/player.tscn" id="1_kh3ve"]
-[ext_resource type="PackedScene" uid="uid://bgpw00c2jb5w6" path="res://scene/mur.tscn" id="2_7g70i"]
 [ext_resource type="PackedScene" uid="uid://xh3h0ti0k0l3" path="res://scene/abeille.tscn" id="3_fa8wq"]
 [ext_resource type="AudioStream" uid="uid://kinhcl702rqq" path="res://musique/Jam_Floraison.mp3" id="5_0oimc"]
 [ext_resource type="PackedScene" uid="uid://b8bjyfpa1lop6" path="res://scene/tile_map.tscn" id="5_ck35u"]
@@ -9,51 +8,22 @@
 [node name="main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_kh3ve")]
-position = Vector2(134, 110)
+z_index = 1
+position = Vector2(167, 242)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Abeille" parent="Player" node_paths=PackedStringArray("fleurs_container") instance=ExtResource("3_fa8wq")]
+z_index = 3
 position = Vector2(152, 150)
 fleurs_container = NodePath("../../Fleurs")
 
-[node name="Mur" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(103, 636)
-
-[node name="Mur2" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(302, 636)
-
-[node name="Mur3" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(499, 636)
-
-[node name="Mur4" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(693, 636)
-
-[node name="Mur5" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(892, 636)
-
-[node name="Mur6" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(1089, 636)
-
-[node name="Mur10" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(995, 555)
-
-[node name="Mur11" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(1197, 424)
-
-[node name="Mur7" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(481, 309)
-
-[node name="Mur8" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(680, 309)
-
-[node name="Mur9" parent="." instance=ExtResource("2_7g70i")]
-position = Vector2(877, 309)
-
 [node name="Fleurs" type="Node2D" parent="."]
+z_index = -1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_0oimc")
 autoplay = true
 
 [node name="TileMap" parent="." instance=ExtResource("5_ck35u")]
+z_index = 2
