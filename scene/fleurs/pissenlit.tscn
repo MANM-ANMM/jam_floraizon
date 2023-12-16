@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3clkm2cdc6pm"]
+
+[ext_resource type="PackedScene" uid="uid://nhhvjrd0pr07" path="res://scene/fleurs/accroche.tscn" id="1_1k02s"]
+[ext_resource type="Script" path="res://script/fleurs/pissenlit.gd" id="1_k60i8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_srfwh"]
+radius = 21.0238
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfgkm"]
+size = Vector2(6.565, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gb4tc"]
+size = Vector2(6, 40)
+
+[node name="Pissenlit" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 17
+script = ExtResource("1_k60i8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -58)
+shape = SubResource("CircleShape2D_srfwh")
+
+[node name="Accroche" parent="." instance=ExtResource("1_1k02s")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Accroche"]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_dfgkm")
+debug_color = Color(0.435294, 0.596078, 0.196078, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_gb4tc")
+
+[connection signal="player_accroche" from="Accroche" to="." method="_on_accroche_player_accroche"]
+[connection signal="player_decroche" from="Accroche" to="." method="_on_accroche_player_decroche"]
