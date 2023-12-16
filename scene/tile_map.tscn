@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b8bjyfpa1lop6"]
 
-[ext_resource type="TileSet" uid="uid://cxv75ad124rlh" path="res://scene/tile_set_monde.tres" id="1_mmpdj"]
+[ext_resource type="TileSet" uid="uid://8h17s41wtdmj" path="res://scene/tile_set_monde.tres" id="1_mmpdj"]
 
 [node name="TileMap" type="TileMap"]
 scale = Vector2(0.3, 0.3)
