@@ -16,7 +16,6 @@ func _process(delta):
 		animated_sprite.scale.x = sign(velocity.x)
 	
 	if is_on_floor():
-		print(velocity.x)
 		animated_sprite.play("run", 3*velocity.x/SPEED)
 	
 	if accroche:

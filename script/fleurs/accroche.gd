@@ -6,10 +6,9 @@ signal player_decroche(player:Player)
 var accroche := false
 var player : Player = null
 var player_parent :Node2D = null
-var offset := Vector2.ZERO
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	if Input.is_action_just_pressed("action_player"):
 		if accroche:
 			decrocher()
@@ -20,7 +19,7 @@ func _process(delta):
 
 func accrocher(p):
 	player = p
-	offset = player.global_position - global_position
+	var offset = player.global_position - global_position
 	player_parent = player.get_parent()
 	player_parent.remove_child(player)
 	player.accroche = true
@@ -31,6 +30,7 @@ func accrocher(p):
 
 func decrocher():
 	if not accroche: return
+	var offset = player.global_position - global_position
 	remove_child(player)
 	player.global_position = offset + global_position
 	player_parent.add_child(player)

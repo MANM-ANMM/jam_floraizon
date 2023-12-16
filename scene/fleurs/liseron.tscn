@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7d0v4ir5ldr"]
+
+[ext_resource type="Script" path="res://script/fleurs/liseron.gd" id="1_jhu12"]
+[ext_resource type="PackedScene" uid="uid://nhhvjrd0pr07" path="res://scene/fleurs/accroche.tscn" id="1_wl3tx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kf2fc"]
+size = Vector2(20, 300)
+
+[node name="Liseron" type="Node2D"]
+script = ExtResource("1_jhu12")
+
+[node name="Accroche" parent="." instance=ExtResource("1_wl3tx")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Accroche"]
+position = Vector2(0, -150)
+shape = SubResource("RectangleShape2D_kf2fc")
+debug_color = Color(0.6, 0.541176, 0.113725, 0.419608)
+
+[connection signal="player_accroche" from="Accroche" to="." method="_on_accroche_player_accroche"]
+[connection signal="player_decroche" from="Accroche" to="." method="_on_accroche_player_decroche"]
