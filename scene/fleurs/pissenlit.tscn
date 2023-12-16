@@ -45,6 +45,3 @@ shape = SubResource("RectangleShape2D_f50ja")
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 position = Vector2(0, -191)
 texture = ExtResource("3_mkede")
-
-[connection signal="player_accroche" from="Accroche" to="." method="_on_accroche_player_accroche"]
-[connection signal="player_decroche" from="Accroche" to="." method="_on_accroche_player_decroche"]
