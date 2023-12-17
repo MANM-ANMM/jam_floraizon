@@ -16,7 +16,7 @@ func _ready():
 func _process(delta):
 	if player != null and accroche.has_overlapping_bodies():
 		var dir := Input.get_axis("move_down_player", "move_up_player")
-		player.position.y -= dir * 300.0 * delta
+		player.move_and_collide(Vector2(0, -dir * 300.0 * delta))
 
 
 func _on_accroche_player_accroche(p:Player):
