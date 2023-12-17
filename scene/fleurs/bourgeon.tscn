@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://berdycrk1rd71"]
+[gd_scene load_steps=4 format=3 uid="uid://berdycrk1rd71"]
 
 [ext_resource type="Script" path="res://script/fleurs/bourgeon.gd" id="1_uyot3"]
+[ext_resource type="Texture2D" uid="uid://cur7eormy52fh" path="res://sprite/fleurs/bourgeon.png" id="2_hdou8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4xab5"]
 radius = 75.0
@@ -13,5 +14,10 @@ script = ExtResource("1_uyot3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4xab5")
 one_way_collision_margin = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.12501, -54)
+scale = Vector2(0.91125, 0.8325)
+texture = ExtResource("2_hdou8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

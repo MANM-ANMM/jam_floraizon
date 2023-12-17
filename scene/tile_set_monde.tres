@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://dswynrf3mltsd" path="res://terrain/Bloc Terre 1.png" id="1_lpqmi"]
 [ext_resource type="Texture2D" uid="uid://cisrnmsex5k32" path="res://terrain/Bloc Terre 2.png" id="2_lwxuh"]
 [ext_resource type="Texture2D" uid="uid://bi5se3m6cuo5g" path="res://terrain/Bloc Terre 3.png" id="3_4sukq"]
-[ext_resource type="Texture2D" uid="uid://ddkblki4r53qu" path="res://terrain/Ronces bout gauche.png" id="3_57smu"]
+[ext_resource type="Texture2D" uid="uid://bemou7qifyfjb" path="res://terrain/Ronces bout gauche.png" id="3_57smu"]
 [ext_resource type="Texture2D" uid="uid://domlwd8nqff5g" path="res://terrain/Bloc Terre 4.png" id="4_eltp3"]
 [ext_resource type="Texture2D" uid="uid://3qsqn26ha6f" path="res://terrain/Branche 1.png" id="5_n8to2"]
 [ext_resource type="Texture2D" uid="uid://exupe1rsc71r" path="res://terrain/Branche 2.png" id="6_43u2g"]
 [ext_resource type="Texture2D" uid="uid://6pdacij30jt4" path="res://terrain/Hautes Herbes 1.png" id="7_etyhc"]
 [ext_resource type="Texture2D" uid="uid://bbxdvy3cctcbg" path="res://terrain/Hautes Herbes 2.png" id="8_3x4m5"]
-[ext_resource type="Texture2D" uid="uid://bywwyoggth81d" path="res://terrain/ronces.png" id="10_4neon"]
-[ext_resource type="Texture2D" uid="uid://c4pxmpa4nvnjx" path="res://terrain/ronces bout droit.png" id="11_873qd"]
+[ext_resource type="Texture2D" uid="uid://cbl1n5bcu01d3" path="res://terrain/ronces.png" id="10_4neon"]
+[ext_resource type="Texture2D" uid="uid://cpr7u5cwe3e3n" path="res://terrain/ronces bout droit.png" id="11_873qd"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_bxia5"]
 tile_data = PackedInt32Array(0, 10, 0, 1, 8, 0, 2, 9, 0)

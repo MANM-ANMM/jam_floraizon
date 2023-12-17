@@ -2,7 +2,7 @@ extends Area2D
 class_name Graine
 
 var scene_fleur:PackedScene
-const speed:=500
+const speed:=750
 
 signal fleur_spawned(fleur)
 
