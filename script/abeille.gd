@@ -1,6 +1,6 @@
 extends Node2D
 
-const speed := 500
+const speed := 700
 
 const nombre_fleurs_max:=3
 
@@ -11,6 +11,7 @@ const nombre_fleurs_max:=3
 @export var scene_graine : PackedScene
 
 @export var fleurs_container : Node2D
+@export var player:Player
 
 @onready var map_input_fleurs : Dictionary = {
 	"bourgeon_abeille":{"scene":scene_bourgeon, "utilise": null},
@@ -52,7 +53,7 @@ func spawn_graine(action:String):
 
 func limit_pos():
 	var limits := get_viewport_rect().size/2
-	if (abs(position.x) > limits.x):
-		position.x = sign(position.x)*limits.x
-	if (abs(position.y) > limits.y):
-		position.y = sign(position.y)*limits.y
+	if (abs(global_position.x-player.global_position.x) > limits.x):
+		global_position.x = player.global_position.x + sign(global_position.x-player.global_position.x)*limits.x
+	if (abs(global_position.y-player.global_position.y) > limits.y):
+		global_position.y = player.global_position.y + sign(global_position.y-player.global_position.y)*limits.y
