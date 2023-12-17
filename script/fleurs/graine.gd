@@ -21,7 +21,7 @@ func _on_body_entered(body):
 
 func construire_fleur():
 	var fleur:Node2D= scene_fleur.instantiate()
-	fleur.position = position
+	fleur.position = position+Vector2.UP*5
 	add_sibling.call_deferred(fleur)
 	fleur_spawned.emit(fleur)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3clkm2cdc6pm"]
+[gd_scene load_steps=7 format=3 uid="uid://d3clkm2cdc6pm"]
 
 [ext_resource type="PackedScene" uid="uid://nhhvjrd0pr07" path="res://scene/fleurs/accroche.tscn" id="1_1k02s"]
 [ext_resource type="Script" path="res://script/fleurs/pissenlit.gd" id="1_k60i8"]
@@ -8,7 +8,9 @@
 size = Vector2(15, 205)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gb4tc"]
-size = Vector2(20, 211)
+size = Vector2(20, 302)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uikdu"]
 
 [node name="Pissenlit" type="CharacterBody2D"]
 collision_layer = 2
@@ -23,11 +25,19 @@ shape = SubResource("RectangleShape2D_dfgkm")
 debug_color = Color(0.435294, 0.596078, 0.196078, 0.419608)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0, -105.5)
+position = Vector2(0, -151)
 shape = SubResource("RectangleShape2D_gb4tc")
+
+[node name="PlayerShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_uikdu")
+disabled = true
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D"]
 position = Vector2(0, -191)
 texture = ExtResource("3_mkede")
+
+[connection signal="player_accroche" from="Accroche" to="." method="_on_accroche_player_accroche"]
+[connection signal="player_decroche" from="Accroche" to="." method="_on_accroche_player_decroche"]

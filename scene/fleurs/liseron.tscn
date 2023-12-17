@@ -5,22 +5,22 @@
 [ext_resource type="Texture2D" uid="uid://dxus1gnuugtms" path="res://sprite/fleurs/liseron.png" id="3_n37mp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kf2fc"]
-size = Vector2(20, 329)
+size = Vector2(30, 400)
 
 [node name="Liseron" type="Node2D"]
 script = ExtResource("1_jhu12")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-12.375, 174.399)
+scale = Vector2(0.89625, 0.918486)
+texture = ExtResource("3_n37mp")
+
 [node name="Accroche" parent="." instance=ExtResource("1_wl3tx")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Accroche"]
-position = Vector2(0, 134.5)
+position = Vector2(-0.374992, 183.399)
 shape = SubResource("RectangleShape2D_kf2fc")
 debug_color = Color(0.6, 0.541176, 0.113725, 0.419608)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-10, 128)
-scale = Vector2(0.7225, 0.740425)
-texture = ExtResource("3_n37mp")
 
 [connection signal="player_accroche" from="Accroche" to="." method="_on_accroche_player_accroche"]
 [connection signal="player_decroche" from="Accroche" to="." method="_on_accroche_player_decroche"]

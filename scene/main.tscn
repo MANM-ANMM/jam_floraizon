@@ -9,14 +9,16 @@
 
 [node name="Player" parent="." instance=ExtResource("1_kh3ve")]
 z_index = 1
-position = Vector2(167, 242)
+position = Vector2(-41, 292)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="Abeille" parent="Player" node_paths=PackedStringArray("fleurs_container") instance=ExtResource("3_fa8wq")]
+[node name="Abeille" parent="." node_paths=PackedStringArray("fleurs_container", "player") instance=ExtResource("3_fa8wq")]
 z_index = 3
-position = Vector2(152, 150)
-fleurs_container = NodePath("../../Fleurs")
+position = Vector2(6905, -1012)
+fleurs_container = NodePath("../Fleurs")
+player = NodePath("../Player")
 
 [node name="Fleurs" type="Node2D" parent="."]
 z_index = -1

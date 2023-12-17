@@ -26,10 +26,12 @@ func accrocher(p):
 	accroche = true
 	player.position = offset
 	add_child(player)
+	player.player_hitted.connect(decrocher)
 	player_accroche.emit(player)
 
 func decrocher():
 	if not accroche: return
+	player.player_hitted.disconnect(decrocher)
 	var offset = player.global_position - global_position
 	remove_child(player)
 	player.global_position = offset + global_position

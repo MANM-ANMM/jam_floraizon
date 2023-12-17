@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbl1n5bcu01d3"
-path="res://.godot/imported/ronces.png-b19dc825e45265d24a23bfb9bc674456.ctex"
+uid="uid://df1wy21pwl1vs"
+path="res://.godot/imported/herbes 1.png-0b9f08d5cd218356603f45be56ad19c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://terrain/ronces.png"
-dest_files=["res://.godot/imported/ronces.png-b19dc825e45265d24a23bfb9bc674456.ctex"]
+source_file="res://terrain/herbes 1.png"
+dest_files=["res://.godot/imported/herbes 1.png-0b9f08d5cd218356603f45be56ad19c1.ctex"]
 
 [params]
 

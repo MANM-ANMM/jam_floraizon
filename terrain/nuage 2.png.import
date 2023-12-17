@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbl1n5bcu01d3"
-path="res://.godot/imported/ronces.png-b19dc825e45265d24a23bfb9bc674456.ctex"
+uid="uid://wt1tuyhf03wu"
+path="res://.godot/imported/nuage 2.png-ac3abb2cc7ba9cb0b09a8d21c02f10d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://terrain/ronces.png"
-dest_files=["res://.godot/imported/ronces.png-b19dc825e45265d24a23bfb9bc674456.ctex"]
+source_file="res://terrain/nuage 2.png"
+dest_files=["res://.godot/imported/nuage 2.png-ac3abb2cc7ba9cb0b09a8d21c02f10d2.ctex"]
 
 [params]
 

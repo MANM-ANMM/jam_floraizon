@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbl1n5bcu01d3"
-path="res://.godot/imported/ronces.png-b19dc825e45265d24a23bfb9bc674456.ctex"
+uid="uid://dgx2pj4u2i8vq"
+path="res://.godot/imported/tronc 3.png-9d55456b0377f4d9e66655c7589db7a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://terrain/ronces.png"
-dest_files=["res://.godot/imported/ronces.png-b19dc825e45265d24a23bfb9bc674456.ctex"]
+source_file="res://terrain/tronc 3.png"
+dest_files=["res://.godot/imported/tronc 3.png-9d55456b0377f4d9e66655c7589db7a5.ctex"]
 
 [params]
 

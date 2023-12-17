@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo87mc3utppsh"]
+
+[ext_resource type="Script" path="res://script/checkpoint.gd" id="1_hmvwu"]
+
+[sub_resource type="Gradient" id="Gradient_ja18g"]
+colors = PackedColorArray(0.313726, 0.627451, 0, 0, 0.313573, 0.629345, 3.85046e-07, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_50b0f"]
+gradient = SubResource("Gradient_ja18g")
+width = 200
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg6yf"]
+size = Vector2(200, 400)
+
+[sub_resource type="Gradient" id="Gradient_r3bei"]
+colors = PackedColorArray(0.941176, 0.247059, 0.141176, 0, 0.941176, 0.247059, 0.141176, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_881he"]
+gradient = SubResource("Gradient_r3bei")
+width = 200
+
+[node name="Checkpoint" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_hmvwu")
+gradient_active = SubResource("GradientTexture1D_50b0f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_hg6yf")
+debug_color = Color(0.65098, 0.521569, 0, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(2, 200)
+texture = SubResource("GradientTexture1D_881he")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

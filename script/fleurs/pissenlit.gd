@@ -16,6 +16,7 @@ var coupe:= false :
 			masse += masse_coupe
 
 
+@onready var player_shape := $PlayerShape2D
 @onready var accroche := $Accroche
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -56,8 +57,14 @@ func _on_accroche_player_accroche(player:Player):
 	masse += masse_player
 	velocity += player.velocity*0.8
 	coupe = true
+	print("test")
+	var p_shape : CollisionShape2D = player.get_node("CollisionShape2D")
+	player_shape.global_position = p_shape.global_position
+	player_shape.shape = p_shape.shape
+	player_shape.disabled = false
 
 
 func _on_accroche_player_decroche(player:Player):
 	player.velocity = velocity
 	masse -= masse_player
+	player_shape.disabled = true
