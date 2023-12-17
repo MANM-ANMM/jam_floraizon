@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://nhhvjrd0pr07" path="res://scene/fleurs/accroche.tscn" id="1_wl3tx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kf2fc"]
-size = Vector2(20, 300)
+size = Vector2(20, 400)
 
 [node name="Liseron" type="Node2D"]
 script = ExtResource("1_jhu12")
@@ -12,7 +12,7 @@ script = ExtResource("1_jhu12")
 [node name="Accroche" parent="." instance=ExtResource("1_wl3tx")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Accroche"]
-position = Vector2(0, 149)
+position = Vector2(0, 200)
 shape = SubResource("RectangleShape2D_kf2fc")
 debug_color = Color(0.6, 0.541176, 0.113725, 0.419608)
 

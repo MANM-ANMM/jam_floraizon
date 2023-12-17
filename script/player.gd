@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
+signal player_hitted()
 
 const SPEED := 300.0
 const JUMP_VELOCITY := -600.0
@@ -9,6 +10,8 @@ const JUMP_VELOCITY := -600.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var accroche := false
+
+@onready var last_checkpoint:=global_position
 
 @onready var animated_sprite := $AnimatedSprite2D
 
@@ -44,3 +47,10 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
+
+func go_to_last_checkpoint():
+	player_hitted.emit()
+	global_position = last_checkpoint
+
+func _on_ronce_detection_body_entered(body):
+	go_to_last_checkpoint.call_deferred()
