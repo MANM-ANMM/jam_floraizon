@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://8v12qsyl0bms"]
+
+[ext_resource type="Script" path="res://script/arrivee.gd" id="1_tiibh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81mdy"]
+size = Vector2(300, 100)
+
+[node name="Arrivee" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_tiibh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_81mdy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

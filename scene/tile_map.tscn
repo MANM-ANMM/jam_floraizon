@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bh8vg0aat7ajy"]
+[gd_scene load_steps=4 format=3 uid="uid://bh8vg0aat7ajy"]
 
 [ext_resource type="TileSet" uid="uid://8h17s41wtdmj" path="res://scene/tile_set_monde.tres" id="1_mmpdj"]
 [ext_resource type="PackedScene" uid="uid://bo87mc3utppsh" path="res://scene/checkpoint.tscn" id="2_w4ddy"]
+[ext_resource type="PackedScene" uid="uid://8v12qsyl0bms" path="res://scene/arrivee.tscn" id="3_t0wu6"]
 
 [node name="TileMap" type="TileMap"]
 position = Vector2(-2, 0)
@@ -25,3 +26,7 @@ position = Vector2(9920, -6080)
 
 [node name="Checkpoint6" parent="." instance=ExtResource("2_w4ddy")]
 position = Vector2(-3536.67, -6500)
+
+[node name="Arrivee" parent="." instance=ExtResource("3_t0wu6")]
+position = Vector2(-7970, 16546.7)
+scale = Vector2(3.333, 3.333)

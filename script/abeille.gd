@@ -20,11 +20,20 @@ const nombre_fleurs_max:=3
 	"tournesol_abeille": {"scene" : scene_tournesol, "utilise" : null},
 }
 
+@onready var animated_sprite := $AnimatedSprite2D
+
 func _ready():
-	$AnimatedSprite2D.play("fly")
+	animated_sprite.play("fly")
+
+
+func _process(delta):
+	if (sign(dir.x) != 0):
+		animated_sprite.scale.x = sign(-dir.x)
+
+var dir:Vector2
 
 func _physics_process(delta):
-	var dir := Input.get_vector("move_left_abeille", "move_right_abeille", "move_up_abeille", "move_down_abeille")
+	dir = Input.get_vector("move_left_abeille", "move_right_abeille", "move_up_abeille", "move_down_abeille")
 	
 	for action in map_input_fleurs:
 		if Input.is_action_just_pressed(action):
