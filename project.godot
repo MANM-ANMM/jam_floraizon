@@ -113,3 +113,4 @@ rappelle_fleur_abeille={
 2d_physics/layer_3="player"
 2d_physics/layer_4="accroche"
 2d_physics/layer_5="fleurs_sol"
+2d_physics/layer_6="ronce"
