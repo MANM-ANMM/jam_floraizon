@@ -20,6 +20,9 @@ const nombre_fleurs_max:=3
 	"tournesol_abeille": {"scene" : scene_tournesol, "utilise" : null},
 }
 
+signal fleur_utilise(action_fleur)
+signal fleur_rappelee(action_fleur)
+
 @onready var animated_sprite := $AnimatedSprite2D
 
 func _ready():
@@ -48,17 +51,20 @@ func _physics_process(delta):
 func rappelle_plante(action:String):
 	var plante = map_input_fleurs[action]["utilise"]
 	map_input_fleurs[action]["utilise"] = null
-	plante.rappeler()
+	fleur_rappelee.emit(action)
+	if plante:
+		plante.rappeler()
 
 func spawn_graine(action:String):
 	var scene_fleur:PackedScene=map_input_fleurs[action]["scene"]
 	var graine : Graine = scene_graine.instantiate()
 	map_input_fleurs[action]["utilise"] = graine
+	fleur_utilise.emit(action)
 	graine.scene_fleur = scene_fleur
 	graine.global_position = global_position
 	fleurs_container.add_child(graine)
 	graine.fleur_spawned.connect(func (f): map_input_fleurs[action]["utilise"] = f)
-
+	graine.graine_wasted.connect(func (): rappelle_plante(action), CONNECT_ONE_SHOT)
 
 func limit_pos():
 	var limits := get_viewport_rect().size/2

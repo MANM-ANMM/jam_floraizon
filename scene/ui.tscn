@@ -1,8 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bo1ri4vhi6s17"]
+[gd_scene load_steps=10 format=3 uid="uid://bo1ri4vhi6s17"]
 
 [ext_resource type="Script" path="res://script/ui.gd" id="1_2m4d5"]
+[ext_resource type="Theme" uid="uid://bo2wq0ftc3g8v" path="res://theme/theme_utilise.tres" id="2_77qys"]
+[ext_resource type="Texture2D" uid="uid://cur7eormy52fh" path="res://sprite/fleurs/bourgeon.png" id="2_ic2k8"]
+[ext_resource type="Texture2D" uid="uid://ly76x4fqnsoo" path="res://sprite/fleurs/pissenlit.png" id="3_x1f5u"]
+[ext_resource type="Texture2D" uid="uid://dw281qjfmr7lx" path="res://sprite/fleurs/pacerette.png" id="4_2h4wp"]
+[ext_resource type="Theme" uid="uid://bpkijj5p48bl8" path="res://theme/theme_non_utilise.tres" id="4_2156m"]
+[ext_resource type="Texture2D" uid="uid://dxus1gnuugtms" path="res://sprite/fleurs/liseron.png" id="5_wcxa7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_muvfy"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_al6jf"]
 content_margin_left = 10.0
 content_margin_top = 10.0
 content_margin_right = 10.0
@@ -16,6 +28,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2m4d5")
+theme_utilise = ExtResource("2_77qys")
+theme_non_utilise = ExtResource("4_2156m")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -31,9 +45,82 @@ theme_override_constants/margin_bottom = 10
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
+size_flags_vertical = 0
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxEmpty_muvfy")
 text = "Chrono: 10:20:60"
+
+[node name="PanelAbeille" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HB" type="VBoxContainer" parent="MarginContainer/PanelAbeille"]
+layout_mode = 2
+
+[node name="HBBourgeon" type="HBoxContainer" parent="MarginContainer/PanelAbeille/HB"]
+layout_mode = 2
+
+[node name="LabelBourgeon" type="Label" parent="MarginContainer/PanelAbeille/HB/HBBourgeon"]
+layout_mode = 2
+theme = ExtResource("4_2156m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al6jf")
+text = "A"
+
+[node name="TextureRectBourgeon" type="TextureRect" parent="MarginContainer/PanelAbeille/HB/HBBourgeon"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_ic2k8")
+expand_mode = 2
+
+[node name="HBPissenlit" type="HBoxContainer" parent="MarginContainer/PanelAbeille/HB"]
+layout_mode = 2
+
+[node name="LabelPissenlit" type="Label" parent="MarginContainer/PanelAbeille/HB/HBPissenlit"]
+layout_mode = 2
+theme = ExtResource("4_2156m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al6jf")
+text = "B"
+
+[node name="TextureRectPissenlit" type="TextureRect" parent="MarginContainer/PanelAbeille/HB/HBPissenlit"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_x1f5u")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HBTournesol" type="HBoxContainer" parent="MarginContainer/PanelAbeille/HB"]
+layout_mode = 2
+
+[node name="LabelTournesol" type="Label" parent="MarginContainer/PanelAbeille/HB/HBTournesol"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al6jf")
+text = "X"
+
+[node name="TextureRectTournesol" type="TextureRect" parent="MarginContainer/PanelAbeille/HB/HBTournesol"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_2h4wp")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HBLiseron" type="HBoxContainer" parent="MarginContainer/PanelAbeille/HB"]
+layout_mode = 2
+
+[node name="LabelLiseron" type="Label" parent="MarginContainer/PanelAbeille/HB/HBLiseron"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_al6jf")
+text = "Y"
+
+[node name="TextureRectLiseron" type="TextureRect" parent="MarginContainer/PanelAbeille/HB/HBLiseron"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("5_wcxa7")
+expand_mode = 2
+stretch_mode = 5

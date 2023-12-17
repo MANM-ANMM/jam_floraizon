@@ -5,6 +5,7 @@ var scene_fleur:PackedScene
 const speed:=750
 
 signal fleur_spawned(fleur)
+signal graine_wasted()
 
 func _physics_process(delta):
 	position.y += delta * speed
@@ -15,6 +16,7 @@ func _on_body_entered(body):
 	
 	
 	if not (body is TileMap) and not(body.collision_layer & 1):
+		graine_wasted.emit()
 		return
 	
 	construire_fleur.call_deferred()

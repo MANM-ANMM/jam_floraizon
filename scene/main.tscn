@@ -35,6 +35,8 @@ z_index = 2
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("5_3vhua")]
 
+[connection signal="fleur_rappelee" from="Abeille" to="CanvasLayer/UI" method="_on_abeille_fleur_rappelee"]
+[connection signal="fleur_utilise" from="Abeille" to="CanvasLayer/UI" method="_on_abeille_fleur_utilise"]
 [connection signal="player_arrive" from="TileMap/Arrivee" to="CanvasLayer/UI" method="_on_arrivee_player_arrive"]
 
 [editable path="TileMap"]
